@@ -29,6 +29,7 @@ time_step = 0
 time_scale = 15/1000 #seconds
 waveform = ""
 
+#Main loop
 while True:
     show_graph_bool = input("Do you want to display graph? Choose Y/N")
     if show_graph_bool == "N":
@@ -91,6 +92,8 @@ while True:
     plt.ylabel("Amplitude")
     plt.show()
     print("Circuit choices are: \n01. capacitor circuit \n02. resistor circuit")
+
+    #Circuit simulation
     circuit_choice = int(input("What circuit do you want to simulate? Enter 1 or 2"))
     if circuit_choice == 1:
         capacitor_circuit(t_values, y_values)
@@ -98,4 +101,5 @@ while True:
         resistor_circuit(t_values, y_values)
     else:
         exit()
+
 
